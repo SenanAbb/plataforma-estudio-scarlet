@@ -1,0 +1,47 @@
+# --- Dependencias y artefactos de Node.js / Next.js ---
+node_modules/
+.next/
+out/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# --- Entorno y credenciales (el ejemplo sí se versiona) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.cloudflared/
+
+# --- Datos de usuario y resultados de procesamiento ---
+# Las rutas con "/" inicial son relativas a src/. Los datos reales viven FUERA de
+# este repositorio (ruta por variable de entorno); estas reglas son una defensa extra.
+/datos/
+/data/
+/uploads/
+/storage/
+/fotos/
+/fotos-giradas/
+/referencias/
+/salidas/
+/backups/
+/infra/pgdata/
+*.dump
+*.sql.gz
+
+# --- Python (herramientas de evaluación) ---
+__pycache__/
+*.pyc
+.venv/
+
+# --- Copias de trabajo de Nexo (se conservan en disco, no se versionan) ---
+*.nexo-*
+
+# --- Logs, temporales y sistema ---
+*.log
+npm-debug.log*
+*.tmp
+.DS_Store
+.idea/
